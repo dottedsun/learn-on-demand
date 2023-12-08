@@ -1,7 +1,8 @@
 version: 2
 sources:
   - name: snowplow
-    database: raw
+    database: DBT_ADVANCED_DEPLOYMENT
+    schema: PUBLIC
     loaded_at_field: collector_tstamp
     freshness:
       error_after: {count: 1, period: hour}

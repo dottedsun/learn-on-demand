@@ -4,7 +4,7 @@
 
 {{
     config(
-      target_database='analytics',
+      target_database='DBT_ADVANCED_DEPLOYMENT',
       target_schema=new_schema,
       unique_key='order_id',
 
@@ -13,6 +13,6 @@
     )
 }}
 
-select * from analytics.{{target.schema}}.mock_orders
+select * from DBT_ADVANCED_DEPLOYMENT.{{target.schema}}.mock_orders
 
 {% endsnapshot %}

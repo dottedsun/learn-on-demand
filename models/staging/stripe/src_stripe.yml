@@ -2,6 +2,7 @@ version: 2
 
 sources:
     - name: stripe
-      database: raw
+      database: DBT_ADVANCED_DEPLOYMENT
+      schema: PUBLIC
       tables:
         - name: payment

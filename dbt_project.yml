@@ -12,12 +12,14 @@ profile: 'default'
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-source-paths: ["models"]
+# source-paths: ["models"] se ha modificado la denominación a la siguiente línea:
+model-paths: ["models"]
 analysis-paths: ["analysis"]
 test-paths: ["tests"]
-data-paths: ["data"]
+# data-paths: ["data"] No puede coexistir con seeds.
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+seed-paths: ["seeds"]
 
 target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
