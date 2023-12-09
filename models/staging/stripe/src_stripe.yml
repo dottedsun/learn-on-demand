@@ -5,4 +5,4 @@ sources:
       database: DBT_ADVANCED_DEPLOYMENT
       schema: PUBLIC
       tables:
-        - name: payment
+        - name: payments
