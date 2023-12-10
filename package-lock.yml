@@ -3,4 +3,10 @@ packages:
   version: 1.1.1
 - package: tnightengale/dbt_meta_testing
   version: 0.3.6
-sha1_hash: 024ad160861b674b57c57c18e2cf4268734a72f4
+- package: calogica/dbt_expectations
+  version: 0.10.1
+- package: dbt-labs/audit_helper
+  version: 0.9.0
+- package: calogica/dbt_date
+  version: 0.10.0
+sha1_hash: 4e4dc148db4868582202c63976a639692ee9405d
