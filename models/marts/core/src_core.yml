@@ -12,7 +12,17 @@ models:
       - dbt_utils.expression_is_true:
           expression: "amount > 5"
     columns:
-      #- name: customer_id
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+          # This test should fail, use "dbt test -s fct_orders --store-failures" to find resultscl
+          - unique:
+              config:
+                severity: warn
+                error_if: ">100"
+                warn_if: ">30"
       - name: order_id
         tests:
           - unique
