@@ -20,9 +20,8 @@ models:
           # This test should fail, use "dbt test -s fct_orders --store-failures" to find resultscl
           - unique:
               config:
-                severity: warn
-                error_if: ">100"
-                warn_if: ">30"
+                store_failures: true
+                schema: dbt_test_errors
       - name: order_id
         tests:
           - unique
